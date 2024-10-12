@@ -1,0 +1,23 @@
+<svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="system-regular-8-account 1" clip-path="url(#clip0_385_498)">
+<g id="Clip path group">
+<mask id="mask0_385_498" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="13" height="12">
+<g id="clip0_113_1397">
+<path id="Vector" d="M12.5 0.117676H0.5V11.1177H12.5V0.117676Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_385_498)">
+<g id="Group">
+<path id="Vector_2" d="M6 9.11768C8.48527 9.11768 10.5 7.3268 10.5 5.11768C10.5 2.90854 8.48527 1.11768 6 1.11768C3.51472 1.11768 1.5 2.90854 1.5 5.11768C1.5 7.3268 3.51472 9.11768 6 9.11768Z" stroke="#193B53" stroke-width="0.713496" stroke-miterlimit="10" stroke-linecap="round"/>
+<path id="Vector_3" fill-rule="evenodd" clip-rule="evenodd" d="M3.0234 9.11768L3.10541 8.9854C3.49816 8.35189 4.12816 7.97663 4.79893 7.97663H7.20108C7.87194 7.97663 8.50196 8.35194 8.89471 8.98551L8.9766 9.11762C9.1653 8.92704 9.34039 8.71872 9.5 8.49476L9.49243 8.48262C8.96107 7.62544 8.10867 7.11768 7.20108 7.11768H4.79893C3.89141 7.11768 3.03906 7.62538 2.50769 8.48245L2.5 8.49482C2.65958 8.71878 2.83468 8.9271 3.0234 9.11768Z" fill="#193B53"/>
+<path id="Vector_4" d="M4.5 4.29625C4.5 3.64534 5.17156 3.11768 6 3.11768C6.82844 3.11768 7.5 3.64534 7.5 4.29625V4.9391C7.5 5.59002 6.82844 6.11768 6 6.11768C5.17156 6.11768 4.5 5.59002 4.5 4.9391V4.29625Z" stroke="#193B53" stroke-width="0.713496" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_385_498">
+<rect width="12" height="11" fill="white" transform="translate(0.5 0.117676)"/>
+</clipPath>
+</defs>
+</svg>
