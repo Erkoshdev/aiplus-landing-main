@@ -38,22 +38,21 @@ function images() {
       .pipe(dest('dist/img'))
 }
 
-// function libsJs() {
-//   return src([
-//     'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
-//     'node_modules/jquery/dist/jquery.min.js',
-//   ])
-//       .pipe(concat('libs.min.js'))
-//       .pipe(dest('app/js'))
-// }
+function libsJs() {
+  return src([
+    'node_modules/swiper/swiper-bundle.js',
+  ])
+      .pipe(concat('libs.min.js'))
+      .pipe(dest('app/js'))
+}
 
-// function libsCss() {
-//   return src([
-//     'node_modules/bootstrap/dist/css/bootstrap.min.css'
-//   ])
-//       .pipe(concat('libs.min.css'))
-//       .pipe(dest('app/css'))
-// }
+function libsCss() {
+  return src([
+    'node_modules/swiper/swiper-bundle.css'
+  ])
+      .pipe(concat('libs.min.css'))
+      .pipe(dest('app/css'))
+}
 
 function styles() {
   return src('app/scss/style.scss')
@@ -91,4 +90,4 @@ exports.cleanDist = cleanDist;
 
 
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(styles, browsersync, watching);
+exports.default = parallel(styles, browsersync, watching, libsJs, libsCss);
