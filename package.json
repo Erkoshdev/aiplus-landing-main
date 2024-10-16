@@ -20,6 +20,7 @@
     "sass": "^1.79.4"
   },
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "swiper": "^11.1.14"
   }
 }

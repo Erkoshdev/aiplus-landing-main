@@ -16,15 +16,25 @@ body {
   font-family: "Gilroy", sans-serif;
 }
 
-.container {
-  max-width: 1410px;
-  padding: 0 15px;
-  margin: 0 auto;
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1410px;
+  }
 }
 
 .scroll-locked {
   height: 100vh;
   overflow: hidden;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 10;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -140,9 +150,25 @@ button {
   background: #FAFAFA;
 }
 
+.scroll-up:hover svg path {
+  transition: 0.25s ease;
+}
+.scroll-up {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 8;
+  display: none;
+}
+
 
 //buttons
-.btn {
+.btn-custom {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -156,18 +182,17 @@ button {
   line-height: 120%; /* 21.6px */
   letter-spacing: -0.9px;
   border: none;
+  transition: 0.3s ease;
+  text-align: center;
 }
-.btn-warning {
+.btn-orange {
   background: var(--1, #FAA318);
   color: #FFF;
 }
-.btn-info {
+.btn-blue {
   background: #1472C2;
   color: #FFF;
 }
-
-
-//inputs
 
 
 //animations
