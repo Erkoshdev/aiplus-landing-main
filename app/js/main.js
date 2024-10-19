@@ -171,7 +171,6 @@ document.querySelectorAll('.navbar-sm-link').forEach(link => {
   })
 })
 
-
 function openMobileMenu() {
   mobileMenu.classList.add('show');
   document.querySelector('body').classList.add('scroll-locked');
@@ -182,3 +181,20 @@ function closeMobileMenu() {
   document.querySelector('body').classList.remove('scroll-locked');
   document.querySelector('.header').removeChild(overlay);
 }
+
+
+//iframe video
+document.querySelectorAll('.video-poster').forEach(poster => {
+  poster.addEventListener('click', function (e) {
+    e.preventDefault();
+    let videoId = poster.getAttribute('data-video-id');
+    let iframe = document.createElement('iframe');
+    iframe.setAttribute('src', 'https://www.youtube.com/embed/' + videoId + '?autoplay=1');
+    iframe.setAttribute('frameborder', '0');
+    iframe.setAttribute('allow', 'autoplay; encrypted-media, picture-in-picture');
+    iframe.setAttribute('allowfullscreen', 'true');
+
+    // Заменяем постер на iframe
+    poster.parentNode.replaceChild(iframe, poster);
+  });
+});

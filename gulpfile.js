@@ -40,8 +40,8 @@ function images() {
 
 function libsJs() {
   return src([
-    'node_modules/swiper/swiper-bundle.js',
-    'node_modules/bootstrap/dist/js/bootstrap.bundle.js'
+    'node_modules/swiper/swiper-bundle.min.js',
+    'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'
   ])
       .pipe(concat('libs.min.js'))
       .pipe(dest('app/js'))
@@ -49,7 +49,7 @@ function libsJs() {
 
 function libsCss() {
   return src([
-    'node_modules/swiper/swiper-bundle.css',
+    'node_modules/swiper/swiper-bundle.min.css',
     'node_modules/bootstrap/dist/css/bootstrap.min.css'
   ])
       .pipe(concat('libs.min.css'))

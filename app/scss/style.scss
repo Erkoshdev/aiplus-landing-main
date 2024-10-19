@@ -381,7 +381,7 @@
 }
 .program-card.violet {
   .program-card-img {
-    background: url("../img/main/violet-bg.png") no-repeat center/100% 100%;
+    background: url("../img/main/violet-bg.webp") no-repeat center/100% 100%;
   }
   .inline-link {
     color: #0095DA;
@@ -393,7 +393,7 @@
 }
 .program-card.green {
   .program-card-img {
-    background: url("../img/main/green-bg.png") no-repeat center/100% 100%;
+    background: url("../img/main/green-bg.webp") no-repeat center/100% 100%;
   }
   .inline-link {
     color: #82C245;
@@ -405,7 +405,7 @@
 }
 .program-card.red {
   .program-card-img {
-    background: url("../img/main/red-bg.png") no-repeat center/100% 100%;
+    background: url("../img/main/red-bg.webp") no-repeat center/100% 100%;
   }
   .inline-link {
     color: #D23A3E;
@@ -417,7 +417,7 @@
 }
 .program-card.orange {
   .program-card-img {
-    background: url("../img/main/orange-bg.png") no-repeat center/100% 100%;
+    background: url("../img/main/orange-bg.webp") no-repeat center/100% 100%;
   }
   .inline-link {
     color: #EE9350;
@@ -429,7 +429,7 @@
 }
 .program-card.mint {
   .program-card-img {
-    background: url("../img/main/mint-bg.png") no-repeat center/100% 100%;
+    background: url("../img/main/mint-bg.webp") no-repeat center/100% 100%;
   }
   .inline-link {
     color: #4796A0;
@@ -448,7 +448,7 @@
 }
 .program-card.blue {
   .program-card-img {
-    background: url("../img/main/blue-bg.png") no-repeat center/100% 100%;
+    background: url("../img/main/blue-bg.webp") no-repeat center/100% 100%;
   }
   .inline-link {
     color: #A663E9;
@@ -1005,6 +1005,7 @@
   flex-shrink: 0;
   border-radius: 30px;
   overflow: hidden;
+  position: relative;
   img {
     width: 100%;
     height: 100%;
@@ -1014,6 +1015,25 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+}
+.video-poster {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  .icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
   }
 }
 
@@ -1137,6 +1157,7 @@
   background: rgba(25, 59, 83, 0.20);
   overflow: hidden;
   height: 414px;
+  position: relative;
   iframe {
     width: 100%;
     height: 100%;
