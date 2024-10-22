@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         992: {
           slidesPerView: 3,
         },
-        1200: {
+        1400: {
           slidesPerView: 4,
         },
       },
@@ -198,3 +198,12 @@ document.querySelectorAll('.video-poster').forEach(poster => {
     poster.parentNode.replaceChild(iframe, poster);
   });
 });
+
+
+//dropdown link prevent default
+document.querySelectorAll('.navbar-dropdown .navbar-link').forEach(link => {
+  link.addEventListener('click', event => event.preventDefault());
+})
+
+
+

@@ -521,6 +521,7 @@
   }
   .result-slider {
     margin: 30px -12px 0;
+    width: calc(100% + 24px);
   }
   .result-slider .swiper-wrapper {
     display: flex;
@@ -530,18 +531,21 @@
     padding: 0 12px;
   }
   .result-card {
-    width: 270px;
+    width: 250px;
   }
   .result-card-primary {
     font-size: 16px;
     font-weight: 500;
+  }
+  .result-card-media {
+    height: 174px;
   }
   .progress-item-score b {
     font-size: 16px;
     font-weight: 500;
   }
   .result-progress svg {
-    width: 60px;
+    width: 50px;
   }
   .result-slider-navigation {
     display: none;
