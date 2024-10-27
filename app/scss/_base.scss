@@ -23,6 +23,12 @@ body {
   }
 }
 
+@media(min-width: 1200px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
 .scroll-locked {
   height: 100vh;
   overflow: hidden;

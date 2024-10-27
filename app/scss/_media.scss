@@ -529,6 +529,11 @@
     max-width: calc(100% - 24px);
     overflow-x: auto;
     padding: 0 12px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer и старый Edge */
+  }
+  .result-slider .swiper-wrapper::-webkit-scrollbar {
+    display: none;
   }
   .result-card {
     width: 250px;
@@ -855,6 +860,15 @@
   }
   .wrapper {
     padding-bottom: 0;
+  }
+}
+
+@media(min-width: 1400px) {
+  .navbar-link {
+    font-size: 16px;
+  }
+  .collapse-header {
+    font-size: 18px;
   }
 }
 

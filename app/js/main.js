@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   if(window.innerWidth > 767) {
     const swiper = new Swiper('.result-slider', {
-      slidesPerView: 2,
+      slidesPerView: 'auto',
       spaceBetween: 20,
       freeMode: true,
       grabCursor: true,
@@ -10,15 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
       navigation: {
         nextEl: '.result-slider-next',
         prevEl: '.result-slider-prev',
-      },
-
-      breakpoints: {
-        992: {
-          slidesPerView: 3,
-        },
-        1400: {
-          slidesPerView: 4,
-        },
       },
     });
   }
