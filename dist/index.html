@@ -11,6 +11,43 @@
 <body>
 
 <div class="wrapper">
+  <div class="mobile-menu">
+    <button class="btn-plain close-mobile-menu">
+      <i class="icon i-close"></i>
+    </button>
+    <img class="mobile-menu-logo" src="img/logo/logo.svg" alt="logotype">
+    <div class="navbar-sm">
+      <div class="navbar-sm-dropdown">
+        <a class="navbar-sm-link toggle-mobile-dropdown">Программы</a>
+        <div class="navbar-sm-dropdown-menu">
+          <a href="#" class="navbar-sm-dropdown-link">Подготовка к ЕНТ</a>
+          <a href="#" class="navbar-sm-dropdown-link">Подготовка в НИШ</a>
+          <a href="#" class="navbar-sm-dropdown-link">Подготовка в РФМШ</a>
+          <a href="#" class="navbar-sm-dropdown-link">Подготовка БИЛ</a>
+          <a href="#" class="navbar-sm-dropdown-link">Онлайн-обучение</a>
+          <a href="#" class="navbar-sm-dropdown-link">Подготовка к ЕНТ онлайн</a>
+          <a href="#" class="navbar-sm-dropdown-link">Подготовка в НИШ онлайн</a>
+          <a href="#" class="navbar-sm-dropdown-link">Повышение уровня знаний</a>
+        </div>
+      </div>
+      <a href="#result" class="navbar-sm-link">Результаты</a>
+      <a href="#motivation" class="navbar-sm-link">Мотивация</a>
+      <a href="#tariff" class="navbar-sm-link">Тарифы</a>
+      <a href="#faq" class="navbar-sm-link">Вопрос-ответ</a>
+      <a href="#footer" class="navbar-sm-link">Контакты</a>
+    </div>
+    <div class="header-social">
+      <a href="#" class="header-social-link">
+        <i class="icon i-insta-sm"></i>
+      </a>
+      <a href="#" class="header-social-link">
+        <i class="icon i-whatsapp-sm"></i>
+      </a>
+      <a href="#" class="header-social-link">
+        <i class="icon i-youtube-sm"></i>
+      </a>
+    </div>
+  </div>
   <div class="header secondary-header">
     <a href="#" class="header-logo">
       <img src="img/logo/logo-yellow.svg" alt="logotype">
@@ -51,31 +88,6 @@
     <button class="btn-plain open-mobile-menu">
       <i class="icon i-menu-black"></i>
     </button>
-    <div class="mobile-menu">
-      <button class="btn-plain close-mobile-menu">
-        <i class="icon i-close"></i>
-      </button>
-      <img class="mobile-menu-logo" src="img/logo/logo.svg" alt="logotype">
-      <div class="navbar-sm">
-        <a href="#program" class="navbar-sm-link">Программы</a>
-        <a href="#result" class="navbar-sm-link">Результаты</a>
-        <a href="#motivation" class="navbar-sm-link">Мотивация</a>
-        <a href="#tariff" class="navbar-sm-link">Тарифы</a>
-        <a href="#faq" class="navbar-sm-link">Вопрос-ответ</a>
-        <a href="#footer" class="navbar-sm-link">Контакты</a>
-      </div>
-      <div class="header-social">
-        <a href="#" class="header-social-link">
-          <i class="icon i-insta-sm"></i>
-        </a>
-        <a href="#" class="header-social-link">
-          <i class="icon i-whatsapp-sm"></i>
-        </a>
-        <a href="#" class="header-social-link">
-          <i class="icon i-youtube-sm"></i>
-        </a>
-      </div>
-    </div>
   </div>
   <div class="slider-wrap">
     <div class="container">
@@ -120,31 +132,6 @@
           <button class="btn-plain open-mobile-menu">
             <i class="icon i-menu"></i>
           </button>
-          <div class="mobile-menu">
-            <button class="btn-plain close-mobile-menu">
-              <i class="icon i-close"></i>
-            </button>
-            <img class="mobile-menu-logo" src="img/logo/logo.svg" alt="logotype">
-            <div class="navbar-sm">
-              <a href="#program" class="navbar-sm-link">Программы</a>
-              <a href="#result" class="navbar-sm-link">Результаты</a>
-              <a href="#motivation" class="navbar-sm-link">Мотивация</a>
-              <a href="#tariff" class="navbar-sm-link">Тарифы</a>
-              <a href="#faq" class="navbar-sm-link">Вопрос-ответ</a>
-              <a href="#footer" class="navbar-sm-link">Контакты</a>
-            </div>
-            <div class="header-social">
-              <a href="#" class="header-social-link">
-                <i class="icon i-instagram"></i>
-              </a>
-              <a href="#" class="header-social-link">
-                <i class="icon i-whatsapp"></i>
-              </a>
-              <a href="#" class="header-social-link">
-                <i class="icon i-youtube"></i>
-              </a>
-            </div>
-          </div>
         </div>
         <div class="slider-content">
           <div class="slider-caption">
@@ -555,11 +542,11 @@
               </div>
             </div>
           </div>
-          <div class="result-slider-navigation">
-            <button class="result-slider-navigation-btn result-slider-prev">
+          <div class="slider-navigation result-slider-navigation">
+            <button class="slider-navigation-btn result-slider-prev">
               <i class="icon i-arrow-left"></i>
             </button>
-            <button class="result-slider-navigation-btn result-slider-next">
+            <button class="slider-navigation-btn result-slider-next">
               <i class="icon i-arrow-right"></i>
             </button>
           </div>
@@ -1185,7 +1172,7 @@
             height="315"
             src=""
             frameborder="0"
-            allow="autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allow="autoplay; encrypted-media; picture-in-picture"
             allowfullscreen
         ></iframe>
       </div>

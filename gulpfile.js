@@ -40,6 +40,9 @@ function images() {
 function libsJs() {
   return src([
     'node_modules/swiper/swiper-bundle.min.js',
+    'node_modules/lightgallery/lightgallery.umd.js',
+    'node_modules/lightgallery/lightgallery.min.js',
+    'node_modules/lightgallery/lightgallery.min.js',
   ])
       .pipe(concat('libs.min.js'))
       .pipe(dest('app/js'))
@@ -48,6 +51,7 @@ function libsJs() {
 function libsCss() {
   return src([
     'node_modules/swiper/swiper-bundle.min.css',
+    'node_modules/lightgallery/css/lightgallery.css',
   ])
       .pipe(concat('libs.min.css'))
       .pipe(dest('app/css'))

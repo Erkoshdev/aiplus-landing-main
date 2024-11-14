@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
-  //слайдер результаты учеников
   if(window.innerWidth > 767) {
+    //слайдер результаты учеников
     new Swiper('.result-slider', {
-      slidesPerView: 'auto',
+      slidesPerView: 2,
       spaceBetween: 20,
       freeMode: true,
       grabCursor: true,
@@ -11,8 +11,70 @@ document.addEventListener('DOMContentLoaded', function () {
         nextEl: '.result-slider-next',
         prevEl: '.result-slider-prev',
       },
+
+      breakpoints: {
+        991: {
+          slidesPerView: 3,
+        },
+        1199: {
+          slidesPerView: 4,
+        }
+      }
+    });
+
+
+    //graduates slider
+    new Swiper('.graduates-slider', {
+      slidesPerView: 2,
+      spaceBetween: 25,
+      freeMode: true,
+      grabCursor: true,
+
+      navigation: {
+        nextEl: '.graduate-slider-next',
+        prevEl: '.graduate-slider-prev',
+      },
+
+      breakpoints: {
+        991: {
+          slidesPerView: 3,
+        },
+        1199: {
+          slidesPerView: 4,
+        }
+      }
+    });
+
+
+    //ent result slider
+    new Swiper('.ent-result-slider', {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      freeMode: true,
+      grabCursor: true,
+
+      navigation: {
+        nextEl: '.ent-result-slider-next',
+        prevEl: '.ent-result-slider-prev',
+      },
+
+      breakpoints: {
+        991: {
+          slidesPerView: 3,
+        },
+        1199: {
+          slidesPerView: 4,
+        }
+      }
     });
   }
+
+
+  // Инициализация lightGallery
+  lightGallery(document.getElementById('resultGallery'), {
+    // plugins: [lgThumbnail, lgFullscreen, lgZoom],
+    selector: '.ent-result-card', // Указываем, чтобы lightGallery запускался по ссылкам внутри слайдов
+  });
 })
 
 
@@ -88,6 +150,12 @@ overlay.addEventListener('click', function () {
 })
 document.querySelectorAll('.navbar-sm-link').forEach(link => {
   link.addEventListener('click', function () {
+    if(link.classList.contains('toggle-mobile-dropdown')) return
+    closeMobileMenu()
+  })
+})
+document.querySelectorAll('.navbar-sm-dropdown-link').forEach(link => {
+  link.addEventListener('click', function () {
     closeMobileMenu()
   })
 })
@@ -101,7 +169,19 @@ function closeMobileMenu() {
   mobileMenu.classList.remove('show');
   document.querySelector('body').classList.remove('scroll-locked');
   document.querySelector('.header').removeChild(overlay);
+  document.querySelectorAll('.navbar-sm-dropdown-menu').forEach(item => {
+    item.classList.remove('show')
+  })
 }
+
+
+//toggle mobile dropdown menu in navbar
+document.querySelectorAll('.toggle-mobile-dropdown').forEach(item => {
+  item.addEventListener('click', () => {
+    const menu = item.nextElementSibling
+    menu.classList.toggle('show')
+  })
+})
 
 
 //iframe video
@@ -130,7 +210,9 @@ document.querySelectorAll('.navbar-dropdown .navbar-link').forEach(link => {
 //modal
 function showModal() {
   document.querySelector('body').classList.add('scroll-locked')
-  document.querySelector('body').style.paddingRight = '17px'
+  if(window.innerWidth > 767) {
+    document.querySelector('body').style.paddingRight = '17px'
+  }
 }
 
 function closeModal() {
@@ -174,3 +256,5 @@ function closeVideoModal() {
   const youtubeContainer = document.getElementById('resultVideo');
   youtubeContainer.querySelector('iframe').setAttribute('src', '')
 }
+
+

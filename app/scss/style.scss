@@ -185,19 +185,6 @@
 .open-mobile-menu, .mobile-menu {
   display: none;
 }
-//.slider:before {
-//  content: '';
-//  width: 604px;
-//  height: 604px;
-//  flex-shrink: 0;
-//  border-radius: 604px;
-//  background: rgba(255, 255, 255, 0.30);
-//  filter: blur(126.9000015258789px);
-//  position: absolute;
-//  left: 107px;
-//  top: 50%;
-//  transform: translateY(-50%);
-//}
 .slider-content {
   display: flex;
   align-items: center;
@@ -215,6 +202,9 @@
     font-weight: 600;
     line-height: 120%; /* 79.2px */
     text-transform: uppercase;
+  }
+  h1 span {
+    color: rgb(250, 163, 24);
   }
 }
 .slider-tools {
@@ -282,7 +272,7 @@
     letter-spacing: -0.68px;
   }
   p {
-    color: rgba(255, 255, 255, 0.60);
+    color: #fff;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -298,6 +288,12 @@
   height: auto;
   object-fit: contain;
   margin: auto 0 0 auto;
+  position: relative;
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
 }
 .slider-img-sm {
   display: none;
@@ -530,13 +526,18 @@
   overflow: hidden;
   cursor: pointer;
   z-index: 1;
-  height: 185px;
+  height: 0;
+  padding-top: 80%;
   svg {
     position: absolute;
     left: 15px;
     top: 15px;
+    z-index: 2;
   }
   img {
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -657,13 +658,13 @@
     letter-spacing: -0.6px;
   }
 }
-.result-slider-navigation {
+.slider-navigation {
   margin: 40px auto 0;
   display: flex;
   width: fit-content;
   gap: 4px;
 }
-.result-slider-navigation-btn {
+.slider-navigation-btn {
   display: flex;
   width: 50px;
   height: 50px;
@@ -981,6 +982,7 @@
   border-radius: 50%;
   overflow: hidden;
   object-fit: cover;
+  margin-bottom: 30px;
 }
 .motivation-caption-icon {
   position: absolute;
@@ -1014,7 +1016,7 @@
   border-radius: 30px;
   overflow: hidden;
   position: relative;
-  max-height: 380px;
+  min-height: 350px;
   img {
     width: 100%;
     height: 100%;
@@ -1027,7 +1029,9 @@
   }
 }
 .video-poster {
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -1659,6 +1663,325 @@
   filter: brightness(0) invert(1);
   opacity: 1;
 }
+
+
+.ent-slider {
+  background: #7874B4;
+  .slider-caption h1 {
+    font-size: 45px;
+    margin-right: -130px;
+  }
+  .slider-img {
+    width: 35%;
+  }
+}
+.ent-tooltip {
+  border-radius: 30px;
+  background-color: rgba(255, 0, 0, 0.35);
+  padding: 10px;
+  color: #fff;
+  width: 260px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -90px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+
+
+.advantages-wrap {
+  padding-top: 100px;
+}
+.advantages .section-title {
+  margin-top: 20px;
+}
+.advantages-list {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.advantage-item {
+  border: 1px solid rgba(122, 117, 180, 0.3);
+  padding: 30px;
+  border-radius: 20px;
+  position: relative;
+  img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+  }
+  h6 {
+    color: #193b53;
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 500;
+    margin-top: 30px;
+  }
+  ul {
+    margin-top: 20px;
+  }
+  li {
+    color: #193b53;
+    font-size: 16px;
+    line-height: 130%;
+    font-weight: 400;
+    position: relative;
+    padding-left: 20px;
+  }
+  li:before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #193b53;
+    position: absolute;
+    left: 7px;
+    top: 7px;
+  }
+}
+.graduates-wrap {
+  padding-top: 100px;
+}
+.graduates .section-title {
+  margin-top: 40px;
+}
+.graduates .section-subtitle {
+  margin-top: 20px;
+}
+.graduates-slider {
+  margin-top: 60px;
+  overflow: visible;
+}
+.graduate-card {
+  height: 0;
+  padding-top: 27%;
+  position: relative;
+  border-radius: 20px;
+  background: #1472C2;
+}
+.graduate-card-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  &:before {
+    content: '';
+    background: url("../img/main/graduate-card-before.svg") no-repeat center/contain;
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+    width: 250px;
+    height: 100%;
+  }
+}
+.graduate-card-img {
+  width: 70%;
+  height: auto;
+  max-height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.graduate-card-primary {
+  font-size: 25px;
+  line-height: 120%;
+  color: #fff;
+  font-weight: 500;
+}
+.graduate-card-secondary {
+  margin-top: 10px;
+  position: relative;
+  padding-left: 24px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 120%;
+  color: #fff;
+  &:before {
+    content: '';
+    background: url("../img/icon/cup-gold.svg") no-repeat center/contain;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.graduate-card-number {
+  margin-top: 30px;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px 15px;
+  width: fit-content;
+  b {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 120%;
+    color: #1472c2;
+  }
+  p {
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 120%;
+    color: #1472c2;
+  }
+}
+.graduate-card-btn-text {
+  margin-top: auto;
+  font-size: 10px;
+  line-height: 120%;
+  color: #fff;
+  font-weight: 400;
+  position: relative;
+  width: fit-content;
+  &:after {
+    content: '';
+    background: url("../img/icon/arrow-down.svg") no-repeat center/contain;
+    width: 12px;
+    height: 42px;
+    position: absolute;
+    left: 50%;
+    bottom: -35px;
+  }
+}
+.graduate-card-btn {
+  margin-top: 25px;
+}
+.graduate-card.even {
+  background: #FAA318;
+  .graduate-card-secondary:before {
+    background: url("../img/icon/cup.svg") no-repeat center/contain;
+  }
+  .graduate-card-number b, .graduate-card-number p {
+    color: #FAA318;
+  }
+}
+.ent-result-wrap {
+  padding-top: 100px;
+}
+.ent-result .section-title {
+  margin-top: 40px;
+}
+.ent-result-slider {
+  margin-top: 60px;
+  overflow: visible;
+}
+.ent-result-card {
+  height: 0;
+  padding-top: 16%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    object-fit: cover;
+  }
+}
+.feedback-inclusive {
+  margin-top: 60px;
+  b {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+}
+.feedback-inclusive-list {
+  display: flex;
+  margin-top: 30px;
+  gap: 40px;
+}
+.feedback-inclusive-item {
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 230px;
+  min-height: 165px;
+  position: relative;
+  img {
+    width: 34px;
+    height: 34px;
+    margin-bottom: 20px;
+  }
+  p {
+    color: #ffffff;
+    font-size: 17px;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+}
+.feedback-inclusive-item + .feedback-inclusive-item:before {
+  content: '+';
+  font-size: 30px;
+  color: #fff;
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.subscribe-wrap {
+  padding-top: 80px;
+}
+.subscribe {
+  border-radius: 50px;
+  background: #7874b4 url("../img/main/subscribe-bg.svg") no-repeat center/cover;
+  display: flex;
+  overflow: hidden;
+}
+.subscribe-caption {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  h2 {
+    color: #ffffff;
+    font-size: 45px;
+    line-height: 1.3;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  h2 a {
+    color: rgb(255, 193, 94);
+  }
+  .btn-custom {
+    margin-top: auto;
+  }
+}
+.subscribe-img {
+  width: 250px;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  bottom: -40px;
+}
+.ent-bonus-sm {
+  display: none;
+}
+.ent-tooltip-sm {
+  display: none;
+}
+.subscribe-img-sm {
+  display: none;
+}
+
+
 
 
 @import "media";
