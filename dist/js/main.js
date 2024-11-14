@@ -1,7 +1,7 @@
-//слайдер результаты учеников
 document.addEventListener('DOMContentLoaded', function () {
+  //слайдер результаты учеников
   if(window.innerWidth > 767) {
-    const swiper = new Swiper('.result-slider', {
+    new Swiper('.result-slider', {
       slidesPerView: 'auto',
       spaceBetween: 20,
       freeMode: true,
@@ -69,76 +69,6 @@ document.getElementById('scrollTopBtn').onclick = function () {
 }
 
 
-//video modal
-const videoModal = document.getElementById('videoModal');
-videoModal.addEventListener('hidden.bs.modal', function () {
-  const youtubeContainer = document.getElementById('resultVideo');
-  youtubeContainer.innerHTML = ''; // Удаляем содержимое
-});
-
-videoModal.addEventListener('shown.bs.modal', function () {
-  const youtubeContainer = document.getElementById('resultVideo');
-  youtubeContainer.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/zkrV_Vl3vng?si=GL520RjDYUmiSlkP" frameborder="0" allow="autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-});
-
-
-//header fixed
-document.addEventListener('DOMContentLoaded', function() {
-  const primaryHeader = document.querySelector('.primary-header');
-  const secondaryHeader = document.querySelector('.secondary-header');
-
-  function updateSecondaryHeader() {
-    secondaryHeader.style.width = primaryHeader.offsetWidth + 'px';
-    secondaryHeader.style.left = primaryHeader.getBoundingClientRect().left + window.pageXOffset + 'px';
-    return primaryHeader.getBoundingClientRect().bottom + window.scrollY;
-  }
-
-  let headerBottomDistanceFromDocumentTop = updateSecondaryHeader();
-
-  function toggleFixedClass() {
-    const scrollY = window.scrollY;
-    if (scrollY > headerBottomDistanceFromDocumentTop) {
-      secondaryHeader.classList.add('fixed');
-    } else {
-      secondaryHeader.classList.remove('fixed');
-    }
-  }
-
-  toggleFixedClass();
-
-  window.addEventListener('scroll', toggleFixedClass);
-
-  window.addEventListener('resize', function() {
-    headerBottomDistanceFromDocumentTop = updateSecondaryHeader();
-    toggleFixedClass();
-  });
-});
-
-
-//анимация
-document.addEventListener('DOMContentLoaded', function() {
-  const doAnimations = function() {
-    const offset = window.scrollY + window.innerHeight; // Нижняя граница видимой области
-
-    const animatables = document.querySelectorAll('.animatable');
-
-    if (animatables.length === 0) {
-      window.removeEventListener('scroll', doAnimations);
-    }
-
-    animatables.forEach(function(animatable) {
-      if ((animatable.getBoundingClientRect().top + window.scrollY + 100) < offset) {
-        animatable.classList.remove('animatable');
-        animatable.classList.add('animated');
-      }
-    });
-  };
-
-  window.addEventListener('scroll', doAnimations);
-  doAnimations(); // Запускаем анимации при загрузке
-});
-
-
 //toggle mobile menu
 const openMenuBtn = document.querySelectorAll('.open-mobile-menu');
 const closeMenuBtn = document.querySelector('.close-mobile-menu');
@@ -197,4 +127,50 @@ document.querySelectorAll('.navbar-dropdown .navbar-link').forEach(link => {
 })
 
 
+//modal
+function showModal() {
+  document.querySelector('body').classList.add('scroll-locked')
+  document.querySelector('body').style.paddingRight = '17px'
+}
 
+function closeModal() {
+  document.querySelectorAll('.modal').forEach(item => item.classList.remove('show'))
+  document.querySelector('body').classList.remove('scroll-locked')
+  document.querySelector('body').style.paddingRight = '0'
+  closeVideoModal()
+}
+
+document.querySelectorAll('.btn-close').forEach(item => {
+  item.onclick = closeModal
+})
+
+
+//feedback modal
+document.querySelectorAll('.call-feedback-modal').forEach(item => {
+  item.addEventListener('click', (e) => {
+    e.preventDefault()
+    document.getElementById('feedbackModal').classList.add('show')
+    showModal()
+  })
+})
+
+
+//video modal
+document.querySelectorAll('.call-video-modal').forEach(item => {
+  item.addEventListener('click', (e) => {
+    e.preventDefault()
+    const videoSrc = item.getAttribute('data-src')
+    showVideoModal(videoSrc)
+    showModal()
+  })
+})
+
+function showVideoModal(src) {
+  document.getElementById('videoModal').classList.add('show')
+  const youtubeContainer = document.getElementById('resultVideo');
+  youtubeContainer.querySelector('iframe').setAttribute('src', src)
+}
+function closeVideoModal() {
+  const youtubeContainer = document.getElementById('resultVideo');
+  youtubeContainer.querySelector('iframe').setAttribute('src', '')
+}

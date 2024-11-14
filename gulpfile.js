@@ -3,7 +3,6 @@ const {src, dest, watch, parallel, series} = require('gulp');
 const scss = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
-const uglify = require('gulp-uglify-es').default;
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
@@ -41,7 +40,6 @@ function images() {
 function libsJs() {
   return src([
     'node_modules/swiper/swiper-bundle.min.js',
-    'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'
   ])
       .pipe(concat('libs.min.js'))
       .pipe(dest('app/js'))
@@ -50,7 +48,6 @@ function libsJs() {
 function libsCss() {
   return src([
     'node_modules/swiper/swiper-bundle.min.css',
-    'node_modules/bootstrap/dist/css/bootstrap.min.css'
   ])
       .pipe(concat('libs.min.css'))
       .pipe(dest('app/css'))
