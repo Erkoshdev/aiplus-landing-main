@@ -75,6 +75,29 @@ document.addEventListener('DOMContentLoaded', function () {
     // plugins: [lgThumbnail, lgFullscreen, lgZoom],
     selector: '.ent-result-card', // Указываем, чтобы lightGallery запускался по ссылкам внутри слайдов
   });
+
+
+  //champion slider
+  new Swiper('.champion-slider', {
+    slidesPerView: 2,
+    spaceBetween: 25,
+    freeMode: true,
+    grabCursor: true,
+
+    navigation: {
+      nextEl: '.champion-slider-next',
+      prevEl: '.champion-slider-prev',
+    },
+
+    breakpoints: {
+      991: {
+        slidesPerView: 3,
+      },
+      1199: {
+        slidesPerView: 4,
+      }
+    }
+  });
 })
 
 

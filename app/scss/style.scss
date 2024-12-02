@@ -22,6 +22,7 @@
   min-height: 70px;
   border-radius: 70px;
   background: rgba(255, 255, 255, 0.20);
+  position: relative;
   z-index: 2;
   transition: 0.3s ease;
   width: 100%;
@@ -305,6 +306,7 @@
     font-weight: 400;
     line-height: 18px; /* 112.5% */
     letter-spacing: -0.16px;
+    margin-top: 15px;
     span {
       color: #FFC15E;
     }
@@ -2046,6 +2048,225 @@
 }
 
 
+.nis-slider {
+  background: #82C245;
+  .slider-caption h1 {
+    font-size: 48px;
+  }
+  .slider-img {
+    width: 50%;
+  }
+  &:before {
+    top: 0;
+    right: 10%;
+    left: initial;
+    transform: initial;
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 2%;
+    top: 15%;
+    background: url("../img/main/oyu.webp") no-repeat center/contain;
+    width: 202px;
+    height: 141px;
+  }
+}
+
+
+.benefit-wrap {
+  padding-top: 120px;
+}
+.benefit .section-title {
+  margin-top: 20px;
+}
+.benefit-list {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.benefit-card {
+  display: flex;
+  padding: 30px 180px 30px 30px;
+  background: #f6f7f8;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  min-height: 260px;
+}
+.benefit-card-caption {
+  h6 {
+    font-size: 26px;
+    font-weight: 500;
+    color: #193B53;
+    letter-spacing: -0.05px;
+    position: relative;
+    z-index: 1;
+  }
+  p {
+    margin-top: 17px;
+    color: rgba(25, 59, 83, 0.7);
+    font-size: 17px;
+    line-height: 120%;
+  }
+}
+.benefit-card-img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+}
+
+
+.champion-slider {
+  margin-top: 40px;
+  overflow: visible;
+}
+.champion-slider .graduate-card-btn-text {
+  display: none;
+}
+.champion-slider .graduate-card-btn {
+  margin-top: auto;
+}
+
+
+.admission-wrap {
+  padding: 300px 0 350px;
+  margin-top: -200px;
+  background: #F6F7F8;
+}
+.admission-content {
+  margin-top: 50px;
+  display: flex;
+  gap: 20px;
+}
+.admission-img {
+  width: 45%;
+  height: 405px;
+  border-radius: 20px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.admission-faq {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.admission-faq-item {
+  background: #fff;
+  .collapse-header span {
+    color: #1472C2;
+  }
+  .collapse-header:after {
+    background-image: url("../img/icon/plus-blue.svg");
+  }
+  .collapse-inner ul {
+    gap: 0;
+  }
+}
+
+
+.poster-wrap {
+  margin-top: -250px;
+}
+.poster {
+  background: #82C245;
+  border-radius: 50px;
+  display: flex;
+  position: relative;
+  &:before {
+    content: '';
+    width: 415px;
+    height: 415px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.30);
+    filter: blur(126.9000015258789px);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.poster-caption {
+  padding: 60px;
+  width: 50%;
+  h5 {
+    color: #fff;
+    font-size: 42px;
+    line-height: 120%;
+    font-weight: 500;
+  }
+  h5 span {
+    color: #193B53;
+  }
+  p {
+    margin-top: 60px;
+    font-size: 20px;
+    line-height: 120%;
+    color: #fff;
+    letter-spacing: -0.05%;
+  }
+  p a {
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+.poster-img {
+  position: absolute;
+  bottom: 0;
+  left: 55%;
+  width: 450px;
+  height: auto;
+}
+
+
+.parent-review-wrap {
+  padding-top: 100px;
+}
+.parent-review .section-title {
+  margin-top: 30px;
+}
+.parent-review-list {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+}
+.parent-review-item {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 0;
+  padding-top: 80%;
+  flex-shrink: 0;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+.parent-review-btn {
+  margin: 40px auto 0;
+}
 
 
 @import "media";
