@@ -65,6 +65,25 @@
   .feedback-caption h2 {
     font-size: 37px;
   }
+  .nis-slider .slider-caption h1 {
+    font-size: 40px;
+  }
+  .nis-slider .slider-caption {
+    width: 55%;
+  }
+  .nis-slider .slider-img {
+    width: 45%;
+  }
+  .benefit-card-caption h6 {
+    font-size: 22px;
+  }
+  .benefit-card-caption p {
+    font-size: 15px;
+  }
+  .benefit-card:nth-child(3) .benefit-card-img {
+    max-width: 60%;
+    height: auto;
+  }
 }
 
 //desktops
@@ -216,6 +235,57 @@
   .subscribe-caption h2 {
     font-size: 34px;
   }
+  .nis-slider .slider-content {
+    display: block;
+  }
+  .nis-slider .slider-caption {
+    width: 100%;
+    max-width: initial;
+  }
+  .nis-slider .slider-caption h1 {
+    font-size: 56px;
+  }
+  .nis-slider:after {
+    display: none;
+  }
+  .nis-slider .slider-numbers {
+    grid-template-columns: 1fr;
+    padding-right: 55%;
+  }
+  .nis-slider .slider-img {
+    position: absolute;
+    right: -30px;
+    bottom: 0;
+    width: 60%;
+  }
+  .benefit-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .benefit-card {
+    min-height: 350px;
+  }
+  .benefit-card-caption h6 {
+    font-size: 30px;
+  }
+  .benefit-card-caption p {
+    font-size: 20px;
+  }
+  .benefit-card:nth-child(3) .benefit-card-img {
+    height: revert-layer;
+  }
+  .poster {
+    min-height: 500px;
+  }
+  .poster-caption {
+    width: 100%;
+  }
+  .poster-img {
+    width: 40%;
+  }
+  .parent-review-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
 }
 
 //tablets
@@ -500,6 +570,31 @@
     left: -30px;
     top: 50%;
     transform: translateY(-50%);
+  }
+  .poster-caption p {
+    max-width: 60%;
+  }
+  .admission-content {
+    flex-direction: column;
+  }
+  .admission-img {
+    width: 100%;
+    height: 450px;
+  }
+  .nis-slider .slider-caption h1 {
+    font-size: 42px;
+  }
+  .nis-slider .slider-number {
+    min-height: 140px;
+  }
+  .nis-slider .slider-img {
+    display: block;
+  }
+  .benefit-card-caption h6 {
+    font-size: 24px;
+  }
+  .benefit-card-caption p {
+    font-size: 18px;
   }
 }
 
@@ -1151,6 +1246,145 @@
   .ent-review .review-card-media {
     height: 250px;
   }
+  .nis-slider .slider-caption h1 {
+    font-size: 24px;
+  }
+  .nis-slider:before {
+    width: 300px;
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .nis-slider .slider-img-sm {
+    width: 300px;
+  }
+  .nis-slider .bonus-caption {
+    display: block;
+    max-width: 150px;
+  }
+  .nis-slider .bonus-caption b {
+    font-size: 20px;
+  }
+  .nis-slider .slider-numbers {
+    padding-right: 0;
+  }
+  .nis-slider .slider-number {
+    min-height: 100px;
+  }
+  .nis-slider .slider-img {
+    display: none;
+  }
+  .benefit-wrap {
+    padding-top: 60px;
+  }
+  .benefit-list {
+    grid-template-columns: 1fr;
+  }
+  .benefit-card {
+    padding: 24px;
+    min-height: 250px;
+  }
+  .benefit-card-caption h6 {
+    font-size: 20px;
+  }
+  .benefit-card-caption p {
+    font-size: 15px;
+    padding-right: 140px;
+  }
+  .benefit-card:nth-child(1) .benefit-card-img {
+    width: 200px;
+    height: auto;
+  }
+  .benefit-card:nth-child(2) .benefit-card-img {
+    width: 275px;
+    height: auto;
+  }
+  .benefit-card:nth-child(3) .benefit-card-img {
+    width: 275px;
+    height: auto;
+  }
+  .benefit-card:nth-child(4) .benefit-card-img {
+    width: 200px;
+    height: auto;
+  }
+  .benefit-card:nth-child(5) .benefit-card-img {
+    width: 200px;
+    height: auto;
+  }
+
+  .champion-slider {
+    margin: 30px -15px 0;
+    width: calc(100% + 30px);
+  }
+  .champion-slider .swiper-wrapper {
+    display: flex;
+    gap: 15px;
+    max-width: calc(100% - 30px);
+    overflow-x: auto;
+    padding: 0 15px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .champion-slider .swiper-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  .admission-wrap {
+    margin-top: 0;
+    padding: 60px 0;
+  }
+  .admission-img {
+    height: 250px;
+  }
+  .admission-faq .collapse-header {
+    font-size: 18px;
+    padding: 30px 60px 30px 20px;
+  }
+  .admission-faq .collapse-inner li {
+    font-size: 16px;
+  }
+  .admission-faq .collapse-inner {
+    padding: 0 20px 30px;
+  }
+  .poster-wrap {
+    margin-top: 0;
+  }
+  .poster {
+    border-radius: 0;
+    margin: 0 -15px;
+    flex-direction: column;
+  }
+  .poster-caption {
+    padding: 50px 40px;
+  }
+  .poster-caption h5 {
+    font-size: 28px;
+    line-height: 140%;
+    text-align: center;
+  }
+  .poster:before {
+    display: none;
+  }
+  .poster-caption p {
+    margin-top: 30px;
+    max-width: 100%;
+    text-align: center;
+  }
+  .poster-img {
+    position: static;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .parent-review-list {
+    grid-template-columns: 1fr;
+  }
+  .parent-review-item {
+    padding-top: 55%;
+  }
+  .parent-review-wrap {
+    padding-top: 60px;
+  }
+
 }
 
 @media(min-width: 1400px) {
@@ -1256,6 +1490,38 @@
     padding: 24px 70px;
     font-size: 22px;
   }
+  .nis-slider .slider-caption h1 {
+    font-size: 60px;
+  }
+  .benefit-card {
+    min-height: 300px;
+  }
+  .benefit-card-caption h6 {
+    font-size: 32px;
+  }
+  .benefit-card-caption p {
+    font-size: 24px;
+  }
+  .graduate-card {
+    padding-top: 30%;
+  }
+  .collapse-header {
+    font-size: 25px;
+    padding: 35px 45px;
+  }
+  .collapse-inner li {
+    font-size: 18px;
+  }
+  .admission-img {
+    height: 500px;
+  }
+  .poster-caption h5 {
+    font-size: 56px;
+  }
+  .poster-caption p {
+    font-size: 26px;
+  }
+
 
 }
 
